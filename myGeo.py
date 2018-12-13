@@ -25,7 +25,7 @@ asecret = "Your API Secret"
 class listener(StreamListener):
     def on_data(self, data):
         data = json.loads(data)
-        logfile = open(os.path.join(outputlocation, address + "-" + datereq + "-Request-Peter.csv"), "a")
+        logfile = open(os.path.join(outputlocation, address + "-" + datereq + "-Request-Randy.csv"), "a")
         logfile2 = open(os.path.join(outputlocation, datereq + "-Tweets.csv"), "a")
         tweet_date = unicode(data['created_at']).encode("ascii", "ignore")[:10] + " " + unicode(data['created_at']).encode("ascii", "ignore")[-4:]
 
